@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotspot BBPMP</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body><div class="login-container">
+    <!-- Header Card -->
+    <img src="images/logo-bbpmp.png" alt="Logo BBPMP" class="logo">
+    <h1 class="main-title">BBPMP</h1>
+    <h2 class="sub-title">PROVINSI JAWA TIMUR</h2>
+    <p class="service-tag">Layanan Hotspot Resmi</p>
+    
+    <!-- Ikon Wi-Fi -->
+    <div class="wifi-icon-wrapper">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0056b3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12a10 10 0 0 1 14 0"></path><path d="M8.5 15.5a5 5 0 0 1 7 0"></path><path d="M12 18h.01"></path><path d="M1.4 8.6a16.5 16.5 0 0 1 21.2 0"></path></svg>
+    </div>
+
+    <p class="welcome-text">
+        Selamat datang di layanan hotspot resmi BBPMP Provinsi Jawa Timur. 
+        Internet ini disediakan untuk mendukung kegiatan pendidikan, pelatihan, dan administrasi di lingkungan BBPMP Provinsi Jawa Timur.
+    </p>
+
+    <!-- 4 Poin Fitur/Informasi -->
+    <div class="features-grid">
+        <div class="feature-item">
+            <span class="icon">🛡️</span>
+            <p>Gunakan Internet Secara Bijak</p>
+        </div>
+        <div class="feature-item">
+            <span class="icon">⚖️</span>
+            <p>Patuhi Peraturan yang Berlaku</p>
+        </div>
+        <div class="feature-item">
+            <span class="icon">🔒</span>
+            <p>Jaringan Aman dan Terpercaya</p>
+        </div>
+        <div class="feature-item">
+            <span class="icon">👥</span>
+            <p>Untuk Kegiatan Pendidikan</p>
+        </div>
+    </div>
+
+    <!-- Form Login MikroTik Otomatis -->
+    <form name="login" action="$(link-login-only)" method="post">
+        <input type="hidden" name="username" value="tamu">
+        <input type="hidden" name="password" value="tamu">
+        <input type="hidden" name="dst" value="$(link-orig)">
+        <input type="hidden" name="popup" value="true">
+        
+        <button type="submit" class="btn-connect">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 8px; vertical-align: middle;"><path d="M5 12a10 10 0 0 1 14 0"></path><path d="M8.5 15.5a5 5 0 0 1 7 0"></path><path d="M12 18h.01"></path></svg>
+            ACCEPT & CONNECT
+        </button>
+    </form>
+
+    <p class="terms-text">
+        Dengan mengklik tombol di atas, Anda menyetujui syarat dan ketentuan penggunaan layanan internet ini.
+    </p>
+
+    <!-- Footer Card Warna Biru Gelap -->
+    <div class="card-footer">
+        <span>🌐 bbpmpjatim.kemendikdasmen.go.id</span>
+        <span class="separator">|</span>
+        <span>© 2026 BBPMP Provinsi Jawa Timur</span>
+    </div>
+</div>
+
+<script src="js/main.js"></script>
+    
+</body>
+</html>
