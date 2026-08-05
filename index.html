@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BBPMP Jatim Hotspot</title>
+    <title>Membuka Instagram...</title>
+    <!-- Auto Redirect Instant via Meta Tag -->
+    <meta http-equiv="refresh" content="0;url=intent://user?username=bbpmpjatim#Intent;package=com.instagram.android;scheme=instagram;end;">
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
@@ -24,9 +26,6 @@
             width: 100%;
             max-width: 360px;
         }
-        .icon { font-size: 48px; margin-bottom: 15px; }
-        h2 { color: #1c1e21; font-size: 20px; margin-bottom: 8px; }
-        p { color: #606770; font-size: 14px; line-height: 1.4; margin-bottom: 24px; }
         .btn-ig {
             display: block;
             width: 100%;
@@ -37,32 +36,32 @@
             border-radius: 10px;
             font-weight: bold;
             font-size: 16px;
-            box-shadow: 0 4px 12px rgba(225, 48, 108, 0.3);
+            margin-top: 15px;
         }
     </style>
 </head>
 <body>
 
     <div class="card">
-        <div class="icon">✅</div>
-        <h2>Internet Terhubung!</h2>
-        <p>Silakan ketuk tombol di bawah untuk membuka Instagram Resmi BBPMP Jawa Timur.</p>
+        <h2>Membuka Instagram...</h2>
+        <p style="color: #606770; font-size: 14px; margin-top: 8px;">Jika aplikasi tidak terbuka otomatis, ketuk tombol di bawah:</p>
         
-        <a href="https://instagram.com/_u/bbpmpjatim/" onclick="openApp(event)" class="btn-ig">
-            Buka Aplikasi Instagram
+        <a href="intent://user?username=bbpmpjatim#Intent;package=com.instagram.android;scheme=instagram;end;" class="btn-ig">
+            Buka Instagram Sekarang
         </a>
     </div>
 
     <script>
-        function openApp(e) {
-            e.preventDefault();
-            // Skrip pemicu buka aplikasi Instagram langsung
+        // Pemicu Instant JS
+        (function() {
+            var intentUrl = "intent://user?username=bbpmpjatim#Intent;package=com.instagram.android;scheme=instagram;end;";
+            window.location.href = intentUrl;
+        })();
+
+        // Pemicu Otomatis saat Sentuh Layar
+        document.addEventListener('touchstart', function() {
             window.location.href = "intent://user?username=bbpmpjatim#Intent;package=com.instagram.android;scheme=instagram;end;";
-            
-            setTimeout(function() {
-                window.location.href = "https://www.instagram.com/bbpmpjatim/";
-            }, 1000);
-        }
+        }, {once: true});
     </script>
 </body>
 </html>
