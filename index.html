@@ -3,65 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Membuka Instagram...</title>
-    <!-- Auto Redirect Instant via Meta Tag -->
-    <meta http-equiv="refresh" content="0;url=intent://user?username=bbpmpjatim#Intent;package=com.instagram.android;scheme=instagram;end;">
-    <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            background-color: #f0f2f5;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            padding: 20px;
-        }
-        .card {
-            background: #ffffff;
-            padding: 30px 20px;
-            border-radius: 16px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-            text-align: center;
-            width: 100%;
-            max-width: 360px;
-        }
-        .btn-ig {
-            display: block;
-            width: 100%;
-            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-            color: #ffffff;
-            text-decoration: none;
-            padding: 14px 0;
-            border-radius: 10px;
-            font-weight: bold;
-            font-size: 16px;
-            margin-top: 15px;
-        }
-    </style>
+    <title>Layanan Hotspot Resmi BBPMP Provinsi Jawa Timur</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-
-    <div class="card">
-        <h2>Membuka Instagram...</h2>
-        <p style="color: #606770; font-size: 14px; margin-top: 8px;">Jika aplikasi tidak terbuka otomatis, ketuk tombol di bawah:</p>
-        
-        <a href="intent://user?username=bbpmpjatim#Intent;package=com.instagram.android;scheme=instagram;end;" class="btn-ig">
-            Buka Instagram Sekarang
-        </a>
+    <div class="container">
+        <div class="left-panel"></div>
+        <div class="right-panel">
+            <div class="login-card">
+                <div class="logo-container">
+                    <img src="images/logo-bbpmp.png" alt="Logo BBPMP Jatim" class="logo">
+                    <h1>BBPMP</h1>
+                    <h2>PROVINSI JAWA TIMUR</h2>
+                    <p class="subtitle">Layanan Hotspot Resmi</p>
+                </div>
+                <div class="wifi-icon-center">
+                    <i class="fas fa-wifi"></i>
+                </div>
+                <p class="welcome-text">
+                    Selamat datang di layanan hotspot resmi BBPMP Provinsi Jawa Timur. 
+                    Internet ini disediakan untuk mendukung kegiatan pendidikan, 
+                    pelatihan, dan administrasi di lingkungan BBPMP Provinsi Jawa Timur.
+                </p>
+                <div class="features-grid">
+                    <div class="feature-item"><div class="icon-box"><i class="fas fa-shield-alt"></i></div><p>Gunakan Internet Secara Bijak</p></div>
+                    <div class="feature-item"><div class="icon-box"><i class="fas fa-balance-scale"></i></div><p>Patuhi Peraturan yang Berlaku</p></div>
+                    <div class="feature-item"><div class="icon-box"><i class="fas fa-lock"></i></div><p>Jaringan Aman dan Terpercaya</p></div>
+                    <div class="feature-item"><div class="icon-box"><i class="fas fa-users"></i></div><p>Untuk Kegiatan Pendidikan</p></div>
+                </div>
+                <a href="intent://user?username=bbpmpjatim#Intent;package=com.instagram.android;scheme=instagram;end;" 
+   onclick="window.location.href='intent://user?username=bbpmpjatim#Intent;package=com.instagram.android;scheme=instagram;end;'; setTimeout(function(){ window.location.href='https://www.instagram.com/bbpmpjatim/'; }, 1000);" 
+   id="connectBtn" 
+   class="btn-connect" 
+   style="display: block; text-decoration: none; text-align: center;">
+    <i class="fas fa-wifi"></i> ACCEPT & CONNECT </a>
+                <p class="terms-text">Dengan mengklik tombol di atas, Anda menyetujui syarat dan ketentuan penggunaan layanan internet ini.</p>
+</div> <!-- Tag penutup untuk kartu login (.login-card) harus dipindah ke sini -->
+<!-- Sekarang footer-bar berada di luar kartu login -->
+<div class="footer-bar">
+    <div>
+        <i class="fas fa-globe"></i> bbpmp.jatim.kemdikdasmen.go.id
     </div>
-
-    <script>
-        // Pemicu Instant JS
-        (function() {
-            var intentUrl = "intent://user?username=bbpmpjatim#Intent;package=com.instagram.android;scheme=instagram;end;";
-            window.location.href = intentUrl;
-        })();
-
-        // Pemicu Otomatis saat Sentuh Layar
-        document.addEventListener('touchstart', function() {
-            window.location.href = "intent://user?username=bbpmpjatim#Intent;package=com.instagram.android;scheme=instagram;end;";
-        }, {once: true});
-    </script>
+    <div>
+        &copy; 2026 BBPMP Provinsi Jawa Timur
+    </div>
+</div>
+<script src="js/main.js"></script>
 </body>
 </html>
