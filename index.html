@@ -5,13 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BBPMP Jatim Hotspot</title>
     <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             background-color: #f0f2f5;
             display: flex;
             justify-content: center;
@@ -28,21 +24,9 @@
             width: 100%;
             max-width: 360px;
         }
-        .icon {
-            font-size: 48px;
-            margin-bottom: 15px;
-        }
-        h2 {
-            color: #1c1e21;
-            font-size: 20px;
-            margin-bottom: 8px;
-        }
-        p {
-            color: #606770;
-            font-size: 14px;
-            line-height: 1.4;
-            margin-bottom: 24px;
-        }
+        .icon { font-size: 48px; margin-bottom: 15px; }
+        h2 { color: #1c1e21; font-size: 20px; margin-bottom: 8px; }
+        p { color: #606770; font-size: 14px; line-height: 1.4; margin-bottom: 24px; }
         .btn-ig {
             display: block;
             width: 100%;
@@ -62,12 +46,23 @@
     <div class="card">
         <div class="icon">✅</div>
         <h2>Internet Terhubung!</h2>
-        <p>Silakan ketuk tombol di bawah ini untuk melanjutkan ke Instagram Resmi BBPMP Jawa Timur.</p>
+        <p>Silakan ketuk tombol di bawah untuk membuka Instagram Resmi BBPMP Jawa Timur.</p>
         
-        <a href="intent://user?username=bbpmpjatim#Intent;package=com.instagram.android;scheme=instagram;end;" class="btn-ig">
+        <a href="https://instagram.com/_u/bbpmpjatim/" onclick="openApp(event)" class="btn-ig">
             Buka Aplikasi Instagram
         </a>
     </div>
 
+    <script>
+        function openApp(e) {
+            e.preventDefault();
+            // Skrip pemicu buka aplikasi Instagram langsung
+            window.location.href = "intent://user?username=bbpmpjatim#Intent;package=com.instagram.android;scheme=instagram;end;";
+            
+            setTimeout(function() {
+                window.location.href = "https://www.instagram.com/bbpmpjatim/";
+            }, 1000);
+        }
+    </script>
 </body>
 </html>
