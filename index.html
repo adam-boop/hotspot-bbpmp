@@ -1,15 +1,45 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="0;url=intent://user?username=bbpmpjatim#Intent;package=com.instagram.android;scheme=instagram;end;">
-    <script>
-        window.location.href = "intent://user?username=bbpmpjatim#Intent;package=com.instagram.android;scheme=instagram;end;";
-    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membuka Instagram...</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 20%;
+            background-color: #f4f4f4;
+        }
+        .btn-ig {
+            background-color: #e1306c;
+            color: white;
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+    </style>
 </head>
 <body>
-    <p style="text-align: center; margin-top: 50px; font-family: sans-serif;">
-        Membuka Aplikasi Instagram BBPMP Jatim...
-    </p>
+    <h3>Koneksi Berhasil!</h3>
+    <p>Silakan ketuk tombol di bawah untuk membuka Instagram BBPMP Jatim:</p>
+    <br>
+    <a href="intent://user?username=bbpmpjatim#Intent;package=com.instagram.android;scheme=instagram;end;" class="btn-ig">
+        Lanjutkan ke Instagram
+    </a>
+
+    <script>
+        // Mencoba klik otomatis sekali
+        window.onload = function() {
+            setTimeout(function() {
+                window.location.href = "intent://user?username=bbpmpjatim#Intent;package=com.instagram.android;scheme=instagram;end;";
+            }, 500);
+        };
+    </script>
 </body>
 </html>
